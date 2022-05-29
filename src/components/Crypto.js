@@ -11,8 +11,8 @@ const Crypto = ({name, price, image, symbol, marketCap, priceChange}) => {
             </div>
             <span className={styles.symbol}>{symbol.toUpperCase()}</span>
             <span className={styles.price}>${price}</span>
-            <span className={priceChange > 0 ? styles.priceChangePos : styles.priceChangeNeg}>{priceChange}%</span>
-            <span className={styles.market}>{marketCap}</span>
+            <span className={priceChange > 0 ? styles.priceChangePos : styles.priceChangeNeg}>{priceChange.toFixed(2)}%</span>
+            <span className={styles.market}>${marketCap.toLocaleString()}</span>
         </div>
     );
 };
