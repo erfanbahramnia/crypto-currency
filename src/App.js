@@ -1,17 +1,23 @@
 import React from "react";
 
+// components
+import Cryptos from "./components/Cryptos";
+
 function App() {
   const containerStyle = {
+    "boxSizing": "borderBox",
     "width": "100vw",
     "minHeight": "100vh",
     "display": "flex",
     "justifyContent": "center", 
     "alignItems": "center",
-    "backgroundColor": "#f7f7f7",
+    "backgroundColor": "#fff",
   }
 
   return (
-    <div style={containerStyle}></div>
+    <div style={containerStyle}>
+      <Cryptos />
+    </div>
   );
 };
 
