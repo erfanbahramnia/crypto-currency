@@ -1,0 +1,50 @@
+.container, .nameImage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    background-color: #f7f7f7;
+    border: solid 0.5px rgb(215, 214, 214);
+    width: 660px;
+    padding: 10px 50px;
+}
+
+.nameImage {
+    width: 150px;
+    text-align: left;
+}
+
+.name {
+    width: 100px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.image {
+    width: 30px;
+}
+
+.symbol, .price {
+    width: 50px;
+    color: rgb(80, 80, 80);
+}
+
+.priceChangeNeg, .priceChangePos {
+    width: 70px;
+    /* font-weight: 600; */
+}
+
+.priceChangeNeg {
+    color: red;
+}
+
+.priceChangePos {
+    color: green;
+}
+
+.market {
+    width: 100px;
+    color: rgb(80, 80, 80);
+}
