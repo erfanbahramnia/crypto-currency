@@ -2,6 +2,10 @@ import React, {useState, useEffect} from 'react';
 
 // crypto api
 import { api } from '../service/api';
+// component
+import Crypto from "./Crypto";
+// css module style
+import styles from "./Cryptos.module.css";
 
 const Cryptos = () => {
     // value of input
@@ -33,11 +37,23 @@ const Cryptos = () => {
 
 
     return (
-        <div>
-            <div>
-                <input type="text" value={search} onChange={searchHandler} />
+        <div className={styles.container}>
+            <div className={styles.search}>
+                <input type="text" value={search} onChange={searchHandler} placeholder="Search..." />
             </div>
-            <div></div>
+            <div style={{"border": "solid 1px silver","borderRadius": "5px"}}>
+                {
+                    filterData.map(coin => <Crypto
+                        key={coin.id}
+                        name={coin.name}
+                        image={coin.image}                      
+                        price={coin.current_price}
+                        symbol={coin.symbol}
+                        marketCap={coin.market_cap}
+                        priceChange={coin.price_change_percentage_24h}
+                    />)
+                }
+            </div>
         </div>
     );
 };
